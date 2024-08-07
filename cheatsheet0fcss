@@ -1,0 +1,150 @@
+*CSS Syntax*
+
+selector {
+    property: value;
+}
+
+
+*Selectors*
+
+p {
+    /* styles applied to all <p> elements */
+}
+
+
+*Class Selector*
+
+.classname {
+    /* styles applied to elements with class="classname" */
+}
+
+
+*ID Selector*
+
+#idname {
+    /* styles applied to element with id="idname" */
+}
+
+
+*Attribute Selector*  
+
+input[type="text"] {
+    /* styles applied to <input> elements with type="text" */
+}
+
+*Text Properties*  
+
+color: #333;
+font-family: Arial, sans-serif;
+font-size: 16px;
+text-align: center;
+
+
+*Background Properties*  
+
+background-color: #f0f0f0;
+background-image: url('background.jpg');
+background-size: cover;
+
+
+*Box Model*  
+
+width: 300px;
+height: 200px;
+padding: 10px;
+margin: 20px;
+border: 1px solid #ccc;
+
+*Display and Positioning* 
+
+display: block;
+position: relative;
+top: 10px;
+left: 20px;
+
+
+*Descendant Selector* 
+
+.container p {
+    /* styles applied to <p> elements inside elements with class="container" */
+}
+
+
+*Child Selector* 
+
+.container > p {
+    /* styles applied to <p> elements that are direct children of elements with class="container" */
+}
+
+*Adjacent Sibling Selector* 
+
+h2 + p {
+    /* styles applied to <p> that immediately follows an <h2> */
+}
+
+
+*Pseudo-classes and Pseudo-elements* 
+
+
+a:hover {
+    /* styles applied to <a> elements on hover */
+}
+
+p::first-line {
+    /* styles applied to the first line of <p> */
+}
+
+
+*Media Queries* 
+
+@media (max-width: 768px) {
+    /* styles applied when screen width is 768px or less */
+}
+
+
+*Flexbox*  
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+*Grid Layout* 
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+
+*Animations*  
+
+@keyframes slidein {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.element {
+    animation: slidein 1s ease-in-out;
+}
+
+
+
+*Transitions*  
+
+.element {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.element:hover {
+    opacity: 0.8;
+}
+
+
