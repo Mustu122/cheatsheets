@@ -1,0 +1,225 @@
+*Variables and Data Types*
+
+// Variables
+let x = 5;
+const PI = 3.14;
+
+// Primitive Data Types
+let name = "John";  // String
+let age = 30;       // Number
+let isStudent = false;  // Boolean
+let fruits = ['apple', 'banana', 'cherry'];  // Array
+let person = {       // Object
+    firstName: "John",
+    lastName: "Doe"
+};
+
+
+*Operators*
+
+let a = 5;
+let b = 3;
+
+// Arithmetic Operators
+let sum = a + b;
+let difference = a - b;
+let product = a * b;
+let quotient = a / b;
+let remainder = a % b;
+
+// Comparison Operators
+let isEqual = a === b;
+let isGreater = a > b;
+let isLessOrEqual = a <= b;
+
+// Logical Operators
+let logicalAnd = (a > 0) && (b > 0);
+let logicalOr = (a > 0) || (b > 0);
+let logicalNot = !(a > 0);
+
+
+*Control Structures
+Conditional Statements*
+
+let time = 10;
+let greeting = "";
+
+if (time < 12) {
+    greeting = "Good morning";
+} else if (time < 18) {
+    greeting = "Good afternoon";
+} else {
+    greeting = "Good evening";
+}
+
+
+*Loops
+For Loop*
+
+
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+
+*While Loop*
+
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+
+
+*ForEach Loop (Array)*
+
+fruits.forEach(function(item, index) {
+    console.log(item, index);
+});
+
+
+*Functions*
+
+// Function Declaration
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+// Function Expression
+let square = function(x) {
+    return x * x;
+};
+
+// Arrow Function
+let multiply = (a, b) => a * b;
+
+
+*Arrays*
+
+
+let fruits = ['apple', 'banana', 'cherry'];
+
+// Accessing Elements
+let firstFruit = fruits[0];
+
+// Adding and Removing Elements
+fruits.push('date');    // Adds to end
+let lastFruit = fruits.pop();  // Removes from end
+
+// Iterating through Array
+for (let fruit of fruits) {
+    console.log(fruit);
+}
+
+
+
+*Objects*
+
+let person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    address: {
+        street: "123 Main St",
+        city: "Anytown"
+    }
+};
+
+// Accessing Properties
+console.log(person.firstName);
+console.log(person.address.city);
+
+// Adding New Property
+person.email = "john.doe@example.com";
+
+// Iterating through Object Properties
+for (let key in person) {
+    console.log(key + ": " + person[key]);
+}
+
+
+*DOM Manipulation (Basic)*
+
+// Accessing Elements
+let element = document.getElementById('myElement');
+let elements = document.getElementsByClassName('myClass');
+let elementsByName = document.getElementsByName('inputName');
+let elementsByTag = document.getElementsByTagName('p');
+let elementByQuery = document.querySelector('.myClass');
+
+// Manipulating Elements
+element.innerHTML = "New content";
+element.style.color = "blue";
+element.classList.add('highlight');
+element.setAttribute('data-id', '123');
+
+// Event Handling
+element.addEventListener('click', function() {
+    console.log('Element clicked!');
+});
+
+
+*Asynchronous JavaScript*
+
+*Promises*
+
+
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        // Simulating async operation
+        setTimeout(() => {
+            let data = "Data fetched successfully";
+            resolve(data);
+        }, 2000);
+    });
+}
+
+fetchData()
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error(error);
+    });
+
+
+*Async/Await*
+
+async function fetchData() {
+    try {
+        let response = await fetch('https://api.example.com/data');
+        let data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+fetchData();
+
+
+
+*Error Handling*
+
+try {
+    // Code that may throw an error
+    let result = 10 / 0;
+} catch (error) {
+    console.error("Error occurred:", error);
+} finally {
+    console.log("Cleanup code here");
+}
+
+
+*Local Storage*
+
+// Saving data
+localStorage.setItem('username', 'John');
+
+// Retrieving data
+let username = localStorage.getItem('username');
+
+// Removing data
+localStorage.removeItem('username');
+
+
